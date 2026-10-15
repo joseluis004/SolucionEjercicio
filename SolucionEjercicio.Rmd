@@ -1,0 +1,6 @@
+---
+title: "Solución ejercicio control de versiones"
+author: "Jose Luis Pérez Sánchez"
+date: "2026-10-15"
+output: html_document
+---
