@@ -106,3 +106,15 @@ En total hay 4 + 7 = 11 animales distintos que no coinciden entre ambos conjunto
 **¿Qué tipo de animales son?**
 
 En Animals2 aparecen dinosaurios (Dipliodocus, Triceratops, Brachiosaurus), que no son mamíferos. También aparecen monos y otros mamíferos. Hay diferencias de escritura entre conjuntos: "Arctic fox" vs "Artic fox", y "Arctic ground squirrel" vs "Artic ground squirrel". Por eso setdiff() los cuenta como distintos aunque sean el mismo animal, habría que establece un nombre común para evitar este tipo de errores.
+
+## f) Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
+
+```{r}
+diff_animales <- union(setdiff(rownames(mammals), rownames(Animals2)),
+                       setdiff(rownames(Animals2), rownames(mammals)))
+diff_animales
+```
+
+Con union() y setdiff() calculamos la diferencia entre los nombres de ambos conjuntos: animales que están en uno pero no en el otro. En total son 11 nombres distintos.
+
+Aquí se ve que en Animals2 aparecen dinosaurios (Dipliodocus, Triceratops, Brachiosaurus) que no están en mammals. Hay nombres mal escritos en Animals2: "Artic fox" y "Artic ground squirrel" en lugar de "Arctic fox" y "Arctic ground squirrel". Hay animales que existen en ambos conjuntos pero con nombre distinto: "Potar monkey" (Animals2) vs "Patas monkey" (mammals), y "Mole" (Animals2) vs "Mole rat" (mammals).
