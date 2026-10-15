@@ -33,3 +33,33 @@ Para conocer las características de los conjuntos, consultamos su ayuda con ?ma
 **Características de mammals:** - Paquete: MASS - 62 filas y 2 columnas - Variables: body (peso corporal en kg) y brain (peso del cerebro en g) - Contiene datos de 62 especies de mamíferos
 
 **Características de Animals2:** - Paquete: robustbase - 65 filas y 2 columnas - Variables: body (peso corporal en kg) y brain (peso del cerebro en g) - Es una versión ampliada y corregida del conjunto Animals - Incluye los datos de mammals más 3 animales extra
+
+## b) Usa las funciones dim, head, tail, str para una primera visión de los conjuntos de datos.
+
+```{r}
+dim(mammals)
+dim(Animals2)
+```
+
+Con dim() obtenemos las dimensiones de cada conjunto: mammals tiene 62 filas y 2 columnas y Animals2 tiene 65 filas y 2 columnas.
+
+```{r}
+head(mammals)
+tail(mammals)
+```
+
+Con head() vemos las primeras filas de mammals y con tail() las últimas.
+
+```{r}
+head(Animals2)
+tail(Animals2)
+```
+
+Hacemos lo mismo con Animals2 para ver sus primeras y últimas filas.
+
+```{r}
+str(mammals)
+str(Animals2)
+```
+
+Con str() observamos la estructura interna de cada conjunto: tipo de objeto (data.frame) y tipo de variables (body y brain son numéricas).
