@@ -79,3 +79,10 @@ colnames(Animals2)
 ```
 
 Hacemos lo mismo con Animals2. Las columnas son las mismas (body y brain), pero los nombres de fila incluyen más animales porque este conjunto tiene 65 filas frente a las 62 de mammals.
+
+```{r}
+commonAnimals <- intersect(rownames(mammals), rownames(Animals2))
+commonAnimals
+```
+
+Con intersect() comparamos los nombres de las filas de mammals y de Animals2, y obtenemos los animales que aparecen en ambos conjuntos.
