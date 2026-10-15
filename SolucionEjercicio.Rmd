@@ -63,3 +63,19 @@ str(Animals2)
 ```
 
 Con str() observamos la estructura interna de cada conjunto: tipo de objeto (data.frame) y tipo de variables (body y brain son numéricas).
+
+## c) Muestra los nombres de las filas y las columnas (rownames, colnames)
+
+```{r}
+rownames(mammals)
+colnames(mammals)
+```
+
+Con rownames() obtenemos los nombres de los animales (filas) del conjunto mammals, y con colnames() los nombres de las variables (columnas), que son body y brain.
+
+```{r}
+rownames(Animals2)
+colnames(Animals2)
+```
+
+Hacemos lo mismo con Animals2. Las columnas son las mismas (body y brain), pero los nombres de fila incluyen más animales porque este conjunto tiene 65 filas frente a las 62 de mammals.
