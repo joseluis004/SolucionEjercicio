@@ -4,3 +4,32 @@ author: "Jose Luis Pérez Sánchez"
 date: "2026-10-15"
 output: html_document
 ---
+
+```{r}
+install.packages("robustbase")
+```
+
+```{r setup}
+# Instalar si es necesario
+# install.packages("MASS")
+# install.packages("robustbase")
+
+library(MASS)
+library(robustbase)
+
+data(mammals)
+data(Animals2)
+```
+
+## a) Mira la las características de ambos conjuntos usando la ayuda.
+
+```{r}
+?mammals
+?Animals2
+```
+
+Para conocer las características de los conjuntos, consultamos su ayuda con ?mammals y ?Animals2. La ayuda se abre en el panel Help de RStudio.
+
+**Características de mammals:** - Paquete: MASS - 62 filas y 2 columnas - Variables: body (peso corporal en kg) y brain (peso del cerebro en g) - Contiene datos de 62 especies de mamíferos
+
+**Características de Animals2:** - Paquete: robustbase - 65 filas y 2 columnas - Variables: body (peso corporal en kg) y brain (peso del cerebro en g) - Es una versión ampliada y corregida del conjunto Animals - Incluye los datos de mammals más 3 animales extra
